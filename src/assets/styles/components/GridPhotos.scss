@@ -1,0 +1,36 @@
+@import '../base/variables';
+
+.parent {
+    display: grid;
+    height: 600px;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    .div1 { grid-area: 2 / 1 / 14 / 4; }
+    .div2 { grid-area: 14 / 1 / 21 / 6; }
+    .div3 { grid-area: 4 / 4 / 14 / 10; }
+    .div4 { grid-area: 14 / 6 / 19 / 10; }
+    .div5 { grid-area: 5 / 10 / 18 / 15; }
+    .div6 { grid-area: 3 / 15 / 14 / 18; }
+    .div7 { grid-area: 1 / 18 / 14 / 21; }
+    .div8 { grid-area: 14 / 15 / 21 / 17; }
+    .div9 { grid-area: 14 / 17 / 19 / 20; }
+
+.home-grid-texts{
+    text-align: center;
+    margin-top: 60px;
+    p{
+        font-weight: $font-weight-bold;
+        font-size: $font-size-lg;
+        color: $secondary-light-dark;
+    }
+    h3{
+        font-weight: $font-weight-bolder;
+        font-size: $font-size-3xl;
+    }
+}
+.parent div {
+    border: 1px solid black;
+}

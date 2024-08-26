@@ -1,0 +1,45 @@
+/* _button_styles.scss */
+
+@mixin button-primary($font-size: $font-size-md, $padding: $spacing-md $spacing-lg) {
+    background-color: $orange-color;
+    color: $white-color;
+    border: none;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($orange-color, 10%);
+    }
+  }
+  
+  @mixin button-secondary($font-size: $font-size-md, $padding: $spacing-md $spacing-lg) {
+    background-color: $white-color;
+    color: $orange-color;
+    border: 1px solid $orange-color;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($white-color, 10%);
+    }
+  }
+
+  
+/* _button_styles.scss */
+
+@mixin apply-button-style($type, $font-size: $font-size-md, $padding: $spacing-md $spacing-lg) {
+    @if $type == 'primary' {
+      @include button-primary($font-size, $padding);
+    } @else if $type == 'secondary' {
+      @include button-secondary($font-size, $padding);
+    } @else {
+      @error "Invalid button type: #{$type}";
+    }
+  }
+  

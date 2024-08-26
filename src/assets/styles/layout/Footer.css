@@ -1,0 +1,48 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 50px 100px;
+  height: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.168627451);
+}
+.footer-container :first-child h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+}
+.footer-container :first-child p {
+  color: #9F9F9F;
+  font-size: 16px;
+}
+.footer-container ul li {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.footer-container .copyright {
+  position: absolute;
+  bottom: 0;
+  padding: 40px 0px;
+}
+
+.footer-headings {
+  margin-bottom: 40px;
+  color: #9F9F9F;
+  font-size: 16px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+form input, form button {
+  border-bottom: 1px solid #000000;
+}
+form input {
+  color: #9F9F9F;
+}
+form button {
+  font-weight: 400;
+  font-size: 14px;
+}/*# sourceMappingURL=Footer.css.map */
