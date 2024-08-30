@@ -1,0 +1,16 @@
+
+@mixin _button($type: 'primary', $font-size: $font-size-md, $padding: $spacing-md $spacing-lg) {
+  background-color: if($type == 'primary', $orange-color, $white-color);
+  color: if($type == 'primary', $white-color, $orange-color);
+  border: if($type == 'primary', none, 1px solid #{$orange-color});
+  padding: $padding;
+  font-size: $font-size;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: if($type == 'primary', darken($orange-color, 10%), darken($white-color, 10%));
+  }
+}
+

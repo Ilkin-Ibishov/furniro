@@ -1,0 +1,39 @@
+@import '../../base/variables';
+@import '../../mixins/button_styles';
+
+.our-products-container{
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $breakpoint-md) {
+        padding: 10px 10px;
+        max-width: $breakpoint-md;
+    }
+
+    h3{
+        text-align: center;
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-bolder;
+        margin-bottom: 32px;
+    }
+    .products-list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-items: center;
+        gap: 32px;
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: auto auto;
+            gap: 30px;
+        }
+    }
+    button{
+        margin-top: 40px;
+        justify-self: center;
+        align-self: center;
+        @include _button($type: 'secondary', $font-size: $font-size-sm, $padding: 12px 72px);
+    }
+}

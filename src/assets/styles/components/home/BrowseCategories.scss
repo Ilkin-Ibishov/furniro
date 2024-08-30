@@ -1,0 +1,37 @@
+@import '../../base/variables';
+@import '../../mixins/typography';
+
+.browse-categories{
+    text-align: center;
+    margin-top: 60px;
+    padding: 0px 10px;
+    p{
+        font-weight: $font-weight-bold;
+        font-size: $font-size-lg;
+        color: $secondary-light-dark;
+        @include _responsive_text($font-size-lg);
+    }
+    h3{
+        font-weight: $font-weight-bolder;
+        font-size: $font-size-3xl;
+        @include _responsive_text($font-size-3xl);
+    }
+    
+}
+
+.sliderDiv{
+    margin-top: 70px;
+    .categoryNameSlide{
+        padding: 40px 0px;
+        text-align: center;
+        background-color: $orange-color;
+        .categoryNameSlideText{
+            color: $white-color;
+            font-weight: $font-weight-bolder;
+            font-size: $font-size-lg;
+            @include _responsive_text($font-size-lg);
+            text-wrap: nowrap;
+            cursor: pointer;
+        }
+    }
+}

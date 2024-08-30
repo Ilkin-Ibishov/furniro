@@ -1,0 +1,7 @@
+@import '../base/variables';
+
+@mixin _responsive_text($font-size: $font-size-md){
+    @media (max-width: $breakpoint-md) {
+        font-size: $font-size - 5;
+    }
+}

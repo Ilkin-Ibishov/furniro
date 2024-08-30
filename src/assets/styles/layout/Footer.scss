@@ -1,12 +1,33 @@
 @import '../base/variables';
 
 .footer-container{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     padding: 50px 100px;
     height: 100%;
     border-top: 1px solid #0000002B;
+
+    @media (max-width: $breakpoint-md) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 50px;
+        :not(span){
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-items: center;
+
+            .footer-headings{
+                margin: 0px 0px 15px;
+            }
+        }
+        :nth-child(4){
+            .footer-headings{
+                margin: 0;
+            }
+        }
+    }
     :first-child{
         h3{
             font-weight: $font-weight-bolder;
@@ -24,12 +45,6 @@
             font-size: $font-size-md;
             margin-bottom: 15px;
         }
-    }
-    
-    .copyright{
-        position: absolute;
-        bottom: 0;
-        padding: 40px 0px;
     }
 }
 
@@ -51,5 +66,12 @@ form{
     button{
         font-weight: $font-weight-normal;
         font-size: $font-size-sm;
+    }
+}
+
+.footer-form-container{
+    @media (max-width: $breakpoint-md) {
+        display: flex;
+        flex-direction: column;
     }
 }

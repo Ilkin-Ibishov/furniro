@@ -1,0 +1,29 @@
+.browse-categories {
+  text-align: center;
+  margin-top: 60px;
+}
+.browse-categories p {
+  font-weight: 600;
+  font-size: 18px;
+  color: #616161;
+}
+.browse-categories h3 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.sliderDiv {
+  margin-top: 70px;
+}
+.sliderDiv .categoryNameSlide {
+  padding: 40px 0px;
+  text-align: center;
+  background-color: #B88E2F;
+}
+.sliderDiv .categoryNameSlide .categoryNameSlideText {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  text-wrap: nowrap;
+  cursor: pointer;
+}/*# sourceMappingURL=BrowseCategories.css.map */

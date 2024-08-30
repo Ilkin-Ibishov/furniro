@@ -4,11 +4,11 @@ import '../../assets/styles/layout/Footer.scss'
 const Footer = () => {
   return (
     <div className='footer-container'>
-        <div>
+        <span>
             <h3 className='footer-headings'>Furniro.</h3>
             <p>400 University Drive Suite 200 Coral Gables,</p>
             <p>FL 33134 USA</p>
-        </div>
+        </span>
         <div>
             <div className='footer-headings'>Links</div>
             <ul>
@@ -26,13 +26,12 @@ const Footer = () => {
                 <li>Privacy Policies</li>
             </ul>
         </div>
-        <div>
+        <div className='footer-form-container'>
             <div className='footer-headings'>Newsletter</div>
             <form>
                 <input type="email" placeholder='Enter Your Email Address' />
                 <button>SUBSCRIBE</button>
             </form>
-            
         </div>
         <div className='copyright'>
             <p>2024 Furniro. All rights reverved</p>

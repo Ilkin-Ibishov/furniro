@@ -1,26 +1,35 @@
-import '../../assets/styles/components/GridPhotos.scss'
+import '../../assets/styles/components/home/GridPhotos.scss';
+import useHomeGridPhotos from '../../hooks/useGetHomeGridPhotos';
 
-const GridPhotos = () => {
-    
-  return (
-    <div>
-        <div className='home-grid-texts'>
-            <p>Share your setup with</p>
-            <h3>#FurniroFurniture</h3>
-        </div>
-        <div className="parent">
-            <div className="div1"> </div>
-            <div className="div2"> </div>
-            <div className="div3"> </div>
-            <div className="div4"> </div>
-            <div className="div5"> </div>
-            <div className="div6"> </div>
-            <div className="div7"> </div>
-            <div className="div8"> </div>
-            <div className="div9"> </div>
-        </div>
-    </div>
-  )
+// Define the structure of the data
+interface Photo {
+  imageUrls: string[];
 }
 
-export default GridPhotos
+const GridPhotos = () => {
+  const { homeGridPhotos, loading } = useHomeGridPhotos() as { homeGridPhotos: Photo[]; loading: boolean };
+
+  if (loading) return <div>Loading...</div>
+  
+  return (
+    <div>
+      <div className='home-grid-texts'>
+        <p>Share your setup with</p>
+        <h3>#FurniroFurniture</h3>
+      </div>
+      <div id="parent">
+        {homeGridPhotos.map((photo, index) => (
+          <div
+            key={index}
+            className={`div${index + 1}`}
+            style={{ width: '100%', height: '100%'}}
+          >
+            <img src={photo?.imageUrls[0]} alt="home images" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default GridPhotos;
